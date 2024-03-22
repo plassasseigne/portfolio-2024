@@ -1,9 +1,9 @@
 <script setup>
-
+import MainCover from '../components/MainCover.vue'
 </script>
 
 <template>
   <main>
-    <h1>Hello world</h1>
+    <MainCover></MainCover>
   </main>
 </template>
