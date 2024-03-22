@@ -44,6 +44,7 @@ import { RouterLink, RouterView } from 'vue-router'
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 99;
 
   &__container {
     display: flex;
