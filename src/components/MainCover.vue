@@ -132,7 +132,6 @@ const animation = () => {
 
       .highlighting {
         display: block;
-        content: '';
         bottom: 10px;
         z-index: -1;
         position: absolute;

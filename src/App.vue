@@ -13,10 +13,10 @@ import { RouterLink, RouterView } from 'vue-router'
           </RouterLink>
         </div>
         <div class="menu__tab">
-          <RouterLink to="#" class="menu__link">
+          <a href="#about" class="menu__link">
             <span class="text">A propos</span>
             <span class="hover">A propos</span>
-          </RouterLink>
+          </a>
         </div>
         <div class="menu__tab">
           <RouterLink to="#" class="menu__link">

@@ -4,11 +4,34 @@
 }
 
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   background-color: $background;
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Rammetto One', sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+
+  .highlighting {
+    display: block;
+    bottom: 10px;
+    z-index: -1;
+    position: absolute;
+    width: calc(100% + 25px);
+    height: 50%;
+    background-color: #fae367;
+    transform-origin: left;
+  }
 }
