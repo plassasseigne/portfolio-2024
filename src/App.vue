@@ -52,7 +52,7 @@ import { RouterLink, RouterView } from 'vue-router'
     border: 2px solid #fae367;
     border-radius: 50px;
     padding: 24px 30px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.50);
     backdrop-filter: blur(20px);
   }
 
