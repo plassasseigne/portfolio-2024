@@ -3,6 +3,7 @@ import MainCover from '../components/MainCover.vue'
 import AboutMe from '../components/AboutMe.vue'
 import MarqueeComponent from '../components/MarqueeComponent.vue'
 import SkillsComponent from '../components/SkillsComponent.vue'
+import ProjectsComponent from '../components/ProjectsComponent.vue'
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import SkillsComponent from '../components/SkillsComponent.vue'
     <AboutMe></AboutMe>
     <MarqueeComponent></MarqueeComponent>
     <SkillsComponent></SkillsComponent>
+    <ProjectsComponent></ProjectsComponent>
   </main>
 </template>
