@@ -5,7 +5,7 @@ const props = defineProps(['skill'])
 <template>
   <div class="skill-card">
     <div class="skill-card__img">
-
+      <img :src="'/src/assets/images/' + props.skill.replace(/ /g, '-') + '.png'" />
     </div>
     <div class="skill-card__name">
       <span>{{ props.skill }}</span>
@@ -21,6 +21,7 @@ const props = defineProps(['skill'])
   border: solid 2px #fae367;
   border-radius: 35px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.50);
@@ -29,6 +30,12 @@ const props = defineProps(['skill'])
 
   &:hover {
     transform: translateY(-15px);
+  }
+
+  &__img {
+    img {
+      max-height: 54px
+    }
   }
 
   &__name {

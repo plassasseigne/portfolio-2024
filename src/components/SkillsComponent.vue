@@ -1,8 +1,8 @@
 <script setup>
 import SkillCard from '../components/cards/SkillCard.vue'
 
-const languages = ["HTML", "CSS", "Javascript", "SASS", "Vue JS", "React Native", "Booststrap", "Three JS", "Gsap", "PHP", "Symfony", 'API Platform']
-const tools = ["Apache", "Linux", "NPM", "Git", "Figma", "Wordpress", "Docker", "Suite Adobe", "Blender"]
+const languages = ["html", "css", "javascript", "sass", "vue js", "react native", "bootstrap", "three js", "gsap", "php", "symfony", "api platform"]
+const tools = ["apache", "linux", "npm", "git", "figma", "wordpress", "docker", "suite adobe", "blender"]
 </script>
 
 <template>
