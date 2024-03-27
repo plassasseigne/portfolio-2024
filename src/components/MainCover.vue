@@ -4,6 +4,8 @@ import Splitting from 'splitting'
 import gsap from 'gsap'
 import ArrowIcon from '../components/icons/ArrowIcon.vue'
 
+const mainCover = ref('')
+
 const title = ref('')
 const titleSplitted = ref()
 const titleLines = ref([])
@@ -20,8 +22,9 @@ onMounted(() => {
 })
 
 const getElems = () => {
-  titleLines.value = document.querySelectorAll('.highlighting')
-  scrollButton.value = document.querySelector('.cover-main__scroll-button')
+  mainCover.value = document.querySelector('.cover-main')
+  titleLines.value = mainCover.value.querySelectorAll('.highlighting')
+  scrollButton.value = mainCover.value.querySelector('.cover-main__scroll-button')
 }
 
 const splitElems = () => {
@@ -64,7 +67,6 @@ const animation = () => {
     duration: 0.6
   })
 }
-
 </script>
 
 <template>

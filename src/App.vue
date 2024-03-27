@@ -19,16 +19,16 @@ import { RouterLink, RouterView } from 'vue-router'
           </a>
         </div>
         <div class="menu__tab">
-          <RouterLink to="#" class="menu__link">
+          <a href="#projects" class="menu__link">
             <span class="text">Projets</span>
             <span class="hover">Projets</span>
-          </RouterLink>
+          </a>
         </div>
         <div class="menu__tab">
-          <RouterLink to="#" class="menu__link">
+          <a href="#contact" class="menu__link">
             <span class="text">Contact</span>
             <span class="hover">Contact</span>
-          </RouterLink>
+          </a>
         </div>
       </div>
     </nav>
