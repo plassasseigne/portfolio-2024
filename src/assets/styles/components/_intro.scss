@@ -1,0 +1,30 @@
+.intro {
+  width: 100%;
+  margin-top: 100px;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    gap: 4.166667%;
+  }
+
+  &__presentation {
+    padding-left: calc(4.166667% * 2);
+    width: calc(4.166667% * 9);
+  }
+
+  &__technologies {
+    width: calc(4.166667% * 10);
+  }
+  
+  &__title {
+    display: flex;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    align-items: center;
+  }
+}

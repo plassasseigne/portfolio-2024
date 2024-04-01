@@ -56,11 +56,22 @@ h3 {
   padding-left: calc(4.166667% * 2);
 }
 
+.col-6 {
+  width: calc(4.166667% * 6);
+}
+
+.col-9 {
+  width: calc(4.166667% * 9);
+}
+
 .col-10 {
-  width: calc(4.166667% * 13);
+  width: calc(4.166667% * 10);
 }
 
 .col-13 {
   width: calc(4.166667% * 13);
-  
+}
+
+.col-20 {
+  width: calc(4.166667% * 20);
 }

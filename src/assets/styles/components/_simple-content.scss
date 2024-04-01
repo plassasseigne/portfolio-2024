@@ -1,0 +1,21 @@
+.simple-content {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    gap: 4.166667%;
+  }
+
+  &__title {
+    display: flex;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 import ProjectCover from '../../components/ProjectCover.vue'
 import SkillCard from '../../components/cards/SkillCard.vue'
 import ButtonComponent from '../../components/ButtonComponent.vue'
+import DoubleImage from '../../components/projects/DoubleImage.vue'
 
 const technologies = ["react native", "expo go", "git", "figma"]
 </script>
@@ -46,7 +47,7 @@ const technologies = ["react native", "expo go", "git", "figma"]
       </h2>
     </div>
     <div class="simple-content__container">
-      <div class="simple-content__content offset-2">
+      <div class="simple-content__content col-13 offset-2">
         <div class="simple-content__text">
           <p>Pour commencer, j’ai réalisé une maquette Figma au préalable afin de savoir exactement ce que je voulais faire.</p>
           <p>L’application est composée de 4 onglets :
@@ -62,24 +63,18 @@ const technologies = ["react native", "expo go", "git", "figma"]
           <p>De plus, afin de stocker certaines informations dans l’appareil, j’ai utilisé la librairie <b>async-storage</b>, comme pour sauvegarder l’équipe ou la photo de profil de l’utilisateur. Et enfin, pour les options, j’ai fais appel aux librairies <b>expo-camera</b> pour accéder à la caméra de l’appareil et <b>expo-screen-orientation</b> pour gérer l’orientation de l’écran, que l’on peut retrouver dans la documentation officielle d’Expo.</p>
         </div>
       </div>
-      <div class="simple-content__image">
+      <div class="simple-content__image col-6">
         <img src="../../assets/images/projects/pokedex_main.jpg" alt="Page d'accueil de l'application Pokedex" />
       </div>
     </div>
   </section>
 
-  <section class="double-image">
-    <div class="double-image__container">
-      <figure class="double-image__image">
-        <img src="../../assets/images/projects/pokedex_get_data.png" alt="Récupération des données" />
-        <figcaption>Exemple de récupération des données d’un Pokemon et de son espèce selon son ID avec Axios - DetailScreen.js</figcaption>
-      </figure>
-      <figure class="double-image__image">
-        <img src="../../assets/images/projects/pokedex_color_type.png" alt="Récupération des données" />
-        <figcaption>Attribution des couleurs par rapport aux types du Pokemon, dans PokemonCard.js</figcaption>
-      </figure>
-    </div>
-  </section>
+  <DoubleImage
+    img1="pokedex_get_data.png"
+    desc1="Exemple de récupération des données d’un Pokemon et de son espèce selon son ID avec Axios - DetailScreen.js"
+    img2="pokedex_color_type.png"
+    desc2="Attribution des couleurs par rapport aux types du Pokemon, dans PokemonCard.js"
+  ></DoubleImage>
 
   <section class="simple-content">
     <div class="simple-content__title offset-2">
@@ -89,10 +84,10 @@ const technologies = ["react native", "expo go", "git", "figma"]
       </h2>
     </div>
     <div class="simple-content__container">
-      <div class="simple-content__image offset-2">
+      <div class="simple-content__image col-6 offset-2">
         <img src="../../assets/images/projects/pokedex_detail.jpg" alt="Page d'accueil de l'application Pokedex" />
       </div>
-      <div class="simple-content__content">
+      <div class="simple-content__content col-13">
         <div class="simple-content__text">
           <p>Le principal défis a été d’apprendre à maîtriser les bases de React Native pour l’application. Bien qu’il y ai beaucoup de ressemblances avec le balisage de l’HTML et du CSS, la façon de développer l’interface d’une application React Native est assez différente. Malgré les outils mis en place par Expo, le débogage est plus complexe.</p>
           <p>Le plus gros problème auquel j’ai été confronté est la gestion de la réception des données de mes requêtes API. Javascript est très stricte, et lorsque j’appelais des données alors que la requête n’était pas tout à fait chargée, j’avais une erreur critique. Et inversement, parfois l’application gardait les données chargées en mémoire, et lorsque je l’actualisais, il ne les recevait plus correctement.</p>
@@ -103,18 +98,12 @@ const technologies = ["react native", "expo go", "git", "figma"]
     </div>
   </section>
 
-  <section class="double-image">
-    <div class="double-image__container">
-      <figure class="double-image__image">
-        <img src="../../assets/images/projects/pokedex_storage.png" alt="Récupération des données" />
-        <figcaption>Ensemble de mes fonctions qui permettent de stocker des informations dans la mémoire du téléphone - StorageService.js</figcaption>
-      </figure>
-      <figure class="double-image__image">
-        <img src="../../assets/images/projects/pokedex_search.png" alt="Récupération des données" />
-        <figcaption>Attribution des couleurs par rapport aux types du Pokemon, dans PokemonCard.js</figcaption>
-      </figure>
-    </div>
-  </section>
+  <DoubleImage
+    img1="pokedex_storage.png"
+    desc1="Ensemble de mes fonctions qui permettent de stocker des informations dans la mémoire du téléphone - StorageService.js"
+    img2="pokedex_search.png"
+    desc2="Fonction qui permet d’effectuer une recherche. Search est un useState attaché à un <TextInput>. A chaque fois que search est mise à jour, on réattribue la valeur, et on lance une recherche grâce à la fonction getData() - SearchScreen.js"
+  ></DoubleImage>
 
   <section class="galerie">
     <div class="galerie__title offset-2">
@@ -146,90 +135,6 @@ const technologies = ["react native", "expo go", "git", "figma"]
 </template>
 
 <style lang="scss" scoped>
-.intro {
-  width: 100%;
-  margin-top: 100px;
-
-  &__container {
-    display: flex;
-    width: 100%;
-    gap: 4.166667%;
-  }
-
-  &__presentation {
-    padding-left: calc(4.166667% * 2);
-    width: calc(4.166667% * 9);
-  }
-
-  &__technologies {
-    width: calc(4.166667% * 10);
-  }
-  
-  &__title {
-    display: flex;
-  }
-
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    align-items: center;
-  }
-}
-
-.simple-content {
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  &__container {
-    display: flex;
-    width: 100%;
-    gap: 4.166667%;
-  }
-
-  &__title {
-    display: flex;
-  }
-
-  &__content {
-    width: calc(4.166667% * 13);
-  }
-
-  &__image {
-    width: calc(4.166667% * 6);
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-.double-image {
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  &__container {
-    display: flex;
-    width: 100%;
-    flex-wrap: nowrap;
-    gap: 10px;
-    padding-left: calc(4.166667% * 2);
-  }
-
-  &__image {
-    width: calc(4.166667% * 10);
-    display: flex;
-    flex-direction: column;
-
-    img {
-      max-width: 100%;
-      max-height: 500px;
-    }
-  }
-}
-
 .galerie {
   width: 100%;
   margin-top: 50px;
