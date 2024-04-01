@@ -17,6 +17,16 @@ p {
   margin-bottom: 1rem;
 }
 
+ul {
+  margin-left: 30px;
+}
+
+figcaption {
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
 h2 {
   font-family: 'Rammetto One', sans-serif;
   font-size: 48px;
@@ -40,4 +50,17 @@ h3 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 50px;
+}
+
+.offset-2 {
+  padding-left: calc(4.166667% * 2);
+}
+
+.col-10 {
+  width: calc(4.166667% * 13);
+}
+
+.col-13 {
+  width: calc(4.166667% * 13);
+  
 }

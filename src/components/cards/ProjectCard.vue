@@ -1,10 +1,12 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 const props = defineProps(['id', 'title', 'date', 'skills', 'categories'])
+
+const slug = props.title.toLowerCase().replace(/\s+/g, '-')
 </script>
 
 <template>
-  <RouterLink to="#" class="project-card">
+  <RouterLink :to="'/project/' + slug" class="project-card">
     <div class="project-card__container">
       <div class="project-card__left">
         <div class="project-card__number">
