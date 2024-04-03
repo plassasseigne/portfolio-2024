@@ -1,9 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { useRoute } from 'vue-router';
+
+const route = useRoute()
 </script>
 
 <template>
-  <header>
+  <header v-if="route.path === '/'">
     <nav class="menu">
       <div class="menu__container">
         <div class="menu__tab">
@@ -29,6 +32,19 @@ import { RouterLink, RouterView } from 'vue-router'
             <span class="text">Contact</span>
             <span class="hover">Contact</span>
           </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <header v-else>
+    <nav class="menu">
+      <div class="menu__container">
+        <div class="menu__tab">
+          <RouterLink to="/" class="menu__link">
+            <span class="text">Retour aux projets</span>
+            <span class="hover">Retour aux projets</span>
+          </RouterLink>
         </div>
       </div>
     </nav>
