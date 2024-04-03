@@ -127,5 +127,4 @@ const technologies = ["unity", "blender"]
       </figure>
     </div>
   </section>
-
 </template>

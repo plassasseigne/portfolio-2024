@@ -103,9 +103,9 @@ const technologies = ["symfony", "api platform", "git", "figma", "vue js", "post
           <p>Ce projet m’a appris à créer un back office et à contrôler les données d’un site grâce à une API. Ce qui est a été très intéressant, c’est d’avoir deux projets à part (une partie back et une partie front) qui sont liées, mais qui peuvent être utilisées seules.</p>
         </div>
         <div class="simple-content__buttons">
-          <ButtonComponent title="Github du front" link="https://github.com/plassasseigne/wr505d"</ButtonComponent>
-          <ButtonComponent title="Github du back" link="https://github.com/plassasseigne/wr506d"</ButtonComponent>
-          <ButtonComponent title="Lien du site" link="https://wr505.lassasseigne.fr/login"</ButtonComponent>
+          <ButtonComponent title="Github du front" link="https://github.com/plassasseigne/wr505d"/>
+          <ButtonComponent title="Github du back" link="https://github.com/plassasseigne/wr506d"/>
+          <ButtonComponent title="Lien du site" link="https://wr505.lassasseigne.fr/login"/>
         </div>
       </div>
       <div class="simple-content__image col-10">

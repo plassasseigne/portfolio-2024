@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import PokedexView from '../views/projects/PokedexView.vue'
 import ScaryviewView from '../views/projects/ScaryviewView.vue'
 import VrView from '../views/projects/VrView.vue'
+import AnyosView from '../views/projects/AnyosView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/project/cauchemar-au-studio',
       name: 'cauchemar-au-studio',
       component: VrView
+    },
+    {
+      path: '/project/anyos',
+      name: 'anyos',
+      component: AnyosView
     },
   ]
 })
