@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(['title', 'img'])
+const props = defineProps(['title', 'img', 'figcaption'])
 </script>
 
 <template>
@@ -10,9 +10,10 @@ const props = defineProps(['title', 'img'])
         <div class="highlighting"></div>
       </h2>
     </div>
-    <div class="image-full__image col-20 offset-2">
+    <figure class="image-full__image col-20 offset-2">
       <img :src="'/src/assets/images/projects/' + props.img" alt="Cover"/>
-    </div>
+      <figcaption>{{ props.figcaption }}</figcaption>
+    </figure>
   </section>
 </template>
 

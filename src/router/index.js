@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PokedexView from '../views/projects/PokedexView.vue'
 import ScaryviewView from '../views/projects/ScaryviewView.vue'
+import VrView from '../views/projects/VrView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,7 +21,12 @@ const router = createRouter({
       path: '/project/scaryview',
       name: 'scaryview',
       component: ScaryviewView
-    }
+    },
+    {
+      path: '/project/cauchemar-au-studio',
+      name: 'cauchemar-au-studio',
+      component: VrView
+    },
   ]
 })
 

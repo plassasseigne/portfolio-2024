@@ -16,7 +16,7 @@ import ArrowIcon from '../components/icons/ArrowIcon.vue'
       <span class="project-cover__date">{{ props.date }}</span>
     </div>
     <div class="project-cover__scroll-button">
-      <a href="#" class="project-cover__scroll-button__wrapper">
+      <a href="#intro" class="project-cover__scroll-button__wrapper">
         <ArrowIcon color="#fae367"></ArrowIcon>
       </a>
     </div>
@@ -47,6 +47,7 @@ import ArrowIcon from '../components/icons/ArrowIcon.vue'
     flex-direction: column;
     justify-content: center;
     padding: 0 calc(4.166667% * 2);
+    text-align: center;
 
     span {
       display: inline-block;

@@ -135,29 +135,5 @@ const technologies = ["react native", "expo go", "git", "figma"]
 </template>
 
 <style lang="scss" scoped>
-.galerie {
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
 
-  &__title {
-    display: flex;
-  }
-
-  &__container {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-left: calc(4.166667% * 2);
-    width: calc(4.166667% * 20);
-    justify-content: space-between;
-  }
-
-  &__image {
-    width: calc(4.166667% * 6 - 10px);
-
-    img {
-      width: 100%;
-    }
-  }
-}
 </style>
