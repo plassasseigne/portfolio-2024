@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { useRoute } from 'vue-router';
+import LogoIcon from './components/icons/LogoIcon.vue'
+import ButtonComponent from './components/ButtonComponent.vue'
 
 const route = useRoute()
 </script>
@@ -51,9 +53,75 @@ const route = useRoute()
   </header>
 
   <RouterView />
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <LogoIcon color="white" />
+      </div>
+      <div class="footer__contact">
+        <div class="footer__rs">
+          <ButtonComponent title="Linkedin" link="https://www.linkedin.com/in/paul-lassasseigne/"/>
+          <ButtonComponent title="Github" link="https://www.linkedin.com/in/paul-lassasseigne/"/>
+        </div>
+        <span>Made with ❤️ - Paul Lassasseigne - © 2024</span>
+      </div>
+      <div class="footer__email">
+        <span class="footer__city">Lyon / Troyes</span>
+        <a href="mailto:paul.lassasseigne@gmail.com" class="footer__link">paul.lassasseigne@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
+.footer {
+  width: 100%;
+  background-color: #fae367;
+
+  &__container {
+    padding: 35px calc(4.166667% * 2);
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  &__contact,
+  &__logo,
+  &__email {
+    width: 33%;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  &__rs {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+  }
+
+  &__email {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__link {
+    color: black;
+  }
+
+  &__city {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
 .menu {
   position: fixed;
   top: 3vh;
