@@ -33,7 +33,13 @@ const router = createRouter({
       name: 'anyos',
       component: AnyosView
     },
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return {
+      top: 0,
+      behavior: 'instant'
+    }
+  }
 })
 
 export default router
