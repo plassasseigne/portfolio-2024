@@ -10,10 +10,10 @@ const route = useRoute()
     <nav class="menu">
       <div class="menu__container">
         <div class="menu__tab">
-          <RouterLink to="/" class="menu__link">
+          <a href="#home" class="menu__link">
             <span class="text">Accueil</span>
             <span class="hover">Accueil</span>
-          </RouterLink>
+          </a>
         </div>
         <div class="menu__tab">
           <a href="#about" class="menu__link">

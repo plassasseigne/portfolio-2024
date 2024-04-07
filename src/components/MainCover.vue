@@ -70,7 +70,7 @@ const animation = () => {
 </script>
 
 <template>
-  <section class="cover-main">
+  <section id="home" class="cover-main">
     <div class="cover-main__content">
       <h1 ref="title" class="cover-main__title">
         <div class="first-name">

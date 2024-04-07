@@ -35,9 +35,15 @@ const router = createRouter({
     },
   ],
   scrollBehavior (to, from, savedPosition) {
-    return {
-      top: 0,
-      behavior: 'instant'
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    } else {
+      return {
+        top: 0,
+        behavior: 'instant'
+      }
     }
   }
 })
