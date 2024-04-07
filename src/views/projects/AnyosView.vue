@@ -3,7 +3,6 @@ import ProjectCover from '../../components/ProjectCover.vue'
 import SkillCard from '../../components/cards/SkillCard.vue'
 import ButtonComponent from '../../components/ButtonComponent.vue'
 import ImageFull from '../../components/projects/ImageFull.vue'
-import DoubleImage from '../../components/projects/DoubleImage.vue'
 
 const technologies = ["gsap", "wordpress", "git", "three js"]
 </script>

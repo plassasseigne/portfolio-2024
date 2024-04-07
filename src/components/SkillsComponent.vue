@@ -2,7 +2,7 @@
 import SkillCard from '../components/cards/SkillCard.vue'
 
 const languages = ["html", "css", "javascript", "sass", "vue js", "react native", "bootstrap", "three js", "gsap", "php", "symfony", "api platform"]
-const tools = ["apache", "linux", "npm", "git", "figma", "wordpress", "docker", "suite adobe", "blender"]
+const tools = ["apache", "linux", "git", "figma", "wordpress", "docker", "suite adobe", "blender"]
 </script>
 
 <template>

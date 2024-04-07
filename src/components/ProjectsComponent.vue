@@ -36,16 +36,16 @@ const projects = [
     id: '05',
     title: 'Jeu de voiture',
     date: '2023',
-    skills: 'C# / Unity / Blender',
+    skills: 'Unity / Blender',
     categories: 'Graphisme / Développement',
-    type: 'personnel'
+    type: 'scolaire'
   },
   {
     id: '06',
-    title: 'Portfolio',
+    title: 'Bot Slack',
     date: '2024',
-    skills: 'Three JS / Vue JS / GSAP',
-    categories: 'Graphisme / Développement',
+    skills: 'Slack / Bolt JS',
+    categories: 'Développement',
     type: 'personnel'
   }
 ]

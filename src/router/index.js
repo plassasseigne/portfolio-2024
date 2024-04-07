@@ -4,6 +4,8 @@ import PokedexView from '../views/projects/PokedexView.vue'
 import ScaryviewView from '../views/projects/ScaryviewView.vue'
 import VrView from '../views/projects/VrView.vue'
 import AnyosView from '../views/projects/AnyosView.vue'
+import CarGameView from '../views/projects/CarGameView.vue'
+import SlackBotView from '../views/projects/SlackBotView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +34,16 @@ const router = createRouter({
       path: '/project/anyos',
       name: 'anyos',
       component: AnyosView
+    },
+    {
+      path: '/project/bot-slack',
+      name: 'bot-slack',
+      component: SlackBotView
+    },
+    {
+      path: '/project/jeu-de-voiture',
+      name: 'jeu-de-voiture',
+      component: CarGameView
     },
   ],
   scrollBehavior (to, from, savedPosition) {
