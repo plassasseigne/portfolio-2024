@@ -91,7 +91,7 @@ const animation = () => {
       </div>
     </div>
     <div class="cover-main__scroll-button">
-      <a href="#" class="cover-main__scroll-button__wrapper">
+      <a href="#about" class="cover-main__scroll-button__wrapper">
         <ArrowIcon color="#fae367"></ArrowIcon>
       </a>
     </div>

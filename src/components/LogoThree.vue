@@ -3,8 +3,10 @@ import { onMounted, ref } from 'vue'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import GUI from 'lil-gui'
+import gsap from 'gsap'
 
 const canvas = ref()
+let logo
 
 onMounted(() => {
   init()
@@ -21,10 +23,13 @@ const init = () => {
   const loader = new GLTFLoader()
 
   loader.load('./src/assets/models/logo.glb', (glb) => {
-    const logo = glb.scene
+    logo = glb.scene
 
-    logo.position.y = -0.25
+    logo.position.y = -1.5
     logo.position.x = 0.6
+
+    logo.rotateY(Math.PI / 180 * -35)
+    logo.rotateX(Math.PI / 180 * -15)
 
     const logoController = gui.addFolder('LogoController')
     logoController.add(logo.position, 'y').min(-5).max(5).step(0.01)
@@ -35,10 +40,9 @@ const init = () => {
     logoController.add(logo.rotation, 'x').min(-5).max(5).step(0.01)
     logoController.add(logo.rotation, 'z').min(-5).max(5).step(0.01)
 
-    logo.rotateY(Math.PI / 180 * -35)
-    logo.rotateX(Math.PI / 180 * -15)
-
     scene.add(logo)
+
+    logoAnimation() 
   })
 
   // Sizes
@@ -55,7 +59,7 @@ const init = () => {
   scene.add(camera)
 
   // Lights
-  const ambientLight = new THREE.AmbientLight(0xffffff, 5)
+  const ambientLight = new THREE.AmbientLight(0xffffff, 9)
 
   scene.add(ambientLight)
 
@@ -75,6 +79,21 @@ const init = () => {
 
   animate()
 }
+
+const logoAnimation = () => {
+  if (logo !== undefined) {
+    gsap.to(logo.position, {
+      y: -0.25,
+      ease: 'power3.out',
+      duration: 1
+    })
+    gsap.to(logo.rotation, {
+      y: logo.rotation.y + Math.PI * 2,
+      ease: 'power3.out',
+      duration: 1
+    })
+  }
+}
 </script>
 
 <template>
@@ -83,7 +102,7 @@ const init = () => {
 
 <style lang="scss" scoped>
 .webgl {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     outline: none;
