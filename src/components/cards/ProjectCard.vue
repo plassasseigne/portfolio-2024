@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-const props = defineProps(['id', 'title', 'date', 'skills', 'categories'])
+const props = defineProps(['id', 'title', 'date', 'skills', 'categories', 'type'])
 
 const slug = props.title.toLowerCase().replace(/\s+/g, '-')
 </script>
@@ -18,7 +18,7 @@ const slug = props.title.toLowerCase().replace(/\s+/g, '-')
       </div>
       <div class="project-card__right">
         <div class="project-card__infos">
-          <span class="date">{{ props.date }}</span>
+          <span class="date-type">Projet {{ props.type }} - {{ props.date }}</span>
           <span class="skills">{{ props.skills }}</span>
           <span class="category">{{ props.categories }}</span>
         </div>

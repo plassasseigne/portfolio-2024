@@ -7,32 +7,46 @@ const projects = [
     title: 'Pokedex',
     date: '2024',
     skills: 'React Native / Expo Go',
-    categories: 'Graphisme / Développement'
+    categories: 'Graphisme / Développement',
+    type: 'personnel'
   },
   {
     id: '02',
     title: 'Scaryview',
     date: '2024',
     skills: 'Symfony / Vue JS / API Platform',
-    categories: 'Graphisme / Développement'
+    categories: 'Graphisme / Développement',
+    type: 'scolaire'
   }, {
     id: '03',
     title: 'Cauchemar au studio',
     date: '2024',
     skills: 'C# / Unity / Blender',
-    categories: 'Graphisme / Développement'
+    categories: 'Graphisme / Développement',
+    type: 'scolaire'
   }, {
     id: '04',
     title: 'Anyos',
     date: '2023',
     skills: 'Three JS / Wordpress / GSAP',
-    categories: 'Développement'
-  }, {
+    categories: 'Développement',
+    type: 'professionnel'
+  }, 
+  {
     id: '05',
+    title: 'Jeu de voiture',
+    date: '2023',
+    skills: 'C# / Unity / Blender',
+    categories: 'Graphisme / Développement',
+    type: 'personnel'
+  },
+  {
+    id: '06',
     title: 'Portfolio',
     date: '2024',
     skills: 'Three JS / Vue JS / GSAP',
-    categories: 'Graphisme / Développement'
+    categories: 'Graphisme / Développement',
+    type: 'personnel'
   }
 ]
 </script>
@@ -53,6 +67,7 @@ const projects = [
         :skills="item.skills"
         :categories="item.categories"
         :id="item.id"
+        :type="item.type"
       ></ProjectCard>
     </div>
   </section>
