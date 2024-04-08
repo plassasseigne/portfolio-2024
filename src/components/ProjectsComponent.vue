@@ -101,8 +101,6 @@ const animate = () => {
     duration: 0.6
   })
 
-  console.log(cards.value)
-
   cards.value.forEach((card) => {
     gsap.fromTo(card, {
       xPercent: 100
