@@ -14,7 +14,7 @@ onMounted(() => {
 
 const init = () => {
   // Debug
-  const gui = new GUI()
+  // const gui = new GUI()
 
   // Scene
   const scene = new THREE.Scene()
@@ -31,14 +31,14 @@ const init = () => {
     logo.rotateY(Math.PI / 180 * -35)
     logo.rotateX(Math.PI / 180 * -15)
 
-    const logoController = gui.addFolder('LogoController')
-    logoController.add(logo.position, 'y').min(-5).max(5).step(0.01)
-    logoController.add(logo.position, 'x').min(-5).max(5).step(0.01)
-    logoController.add(logo.position, 'z').min(-5).max(5).step(0.01)
+    // const logoController = gui.addFolder('LogoController')
+    // logoController.add(logo.position, 'y').min(-5).max(5).step(0.01)
+    // logoController.add(logo.position, 'x').min(-5).max(5).step(0.01)
+    // logoController.add(logo.position, 'z').min(-5).max(5).step(0.01)
 
-    logoController.add(logo.rotation, 'y').min(-5).max(5).step(0.01)
-    logoController.add(logo.rotation, 'x').min(-5).max(5).step(0.01)
-    logoController.add(logo.rotation, 'z').min(-5).max(5).step(0.01)
+    // logoController.add(logo.rotation, 'y').min(-5).max(5).step(0.01)
+    // logoController.add(logo.rotation, 'x').min(-5).max(5).step(0.01)
+    // logoController.add(logo.rotation, 'z').min(-5).max(5).step(0.01)
 
     scene.add(logo)
 

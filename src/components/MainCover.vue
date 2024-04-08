@@ -39,7 +39,7 @@ const animation = () => {
     y: 200,
   }, {
     y: 0,
-    duration: 0.4, 
+    duration: 0.4,
     stagger: 0.06
   })
 

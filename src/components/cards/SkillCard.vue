@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(['skill'])
+const props = defineProps(['skill', 'opacity'])
 </script>
 
 <template>

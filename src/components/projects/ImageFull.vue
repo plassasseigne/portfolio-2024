@@ -25,6 +25,8 @@ const props = defineProps(['title', 'img', 'figcaption'])
 
   &__title {
     display: flex;
+    overflow: hidden;
+    margin-bottom: 30px;
   }
 
   &__image {

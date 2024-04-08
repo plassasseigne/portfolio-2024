@@ -19,6 +19,8 @@
   
   &__title {
     display: flex;
+    overflow: hidden;
+    margin-bottom: 30px;
   }
 
   &__list {

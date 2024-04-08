@@ -1,16 +1,78 @@
+<script setup>
+import { onMounted, ref } from 'vue'
+import Splitting from 'splitting'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+const el = ref()
+
+const title = ref()
+const titleSplitted = ref()
+const titleLine = ref()
+
+const meCartoon = ref()
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger)
+
+  splitElems()
+  animate()
+})
+
+const splitElems = () => {
+  titleSplitted.value = Splitting({ target: title.value, by: 'chars' })[0].chars
+}
+
+const animate = () => {
+  gsap.fromTo(titleSplitted.value, {
+    y: 100
+  }, {
+    scrollTrigger: {
+      trigger: el.value,
+    },
+    y: 0,
+    duration: 0.6,
+    stagger: 0.06
+  })
+
+  gsap.fromTo(titleLine.value, {
+    scaleX: '0%'
+  }, {
+    scrollTrigger: {
+      trigger: el.value,
+    },
+    scaleX: '100%',
+    ease: 'power3.out',
+    duration: 0.6
+  })
+
+  gsap.fromTo(meCartoon.value, {
+    scale: 0
+  }, {
+    scrollTrigger: {
+      trigger: el.value,
+    },
+    scale: 1,
+    ease: 'bounce',
+    duration: 1.5
+  })
+}
+
+</script>
+
 <template>
-  <section id="about" class="about">
+  <section ref="el" id="about" class="about">
     <div class="about__container">
       <div class="about__character">
         <div class="about__character__container">
-          <img src="../assets/images/character.png" alt="Me as cartoon character" />
+          <img ref="meCartoon" src="../assets/images/character.png" alt="Me as cartoon character" />
         </div>
       </div>
       <div class="about__biography">
-        <div class="about__title">
+        <div ref="title" class="about__title">
           <h2>
             A propos
-            <div class="highlighting"></div>
+            <div ref="titleLine" class="highlighting"></div>
           </h2>
         </div>
         <div class="about__text">
@@ -63,6 +125,8 @@
 
   &__title {
     display: flex;
+    overflow: hidden;
+    margin-bottom: 30px;
   }
 }
 </style>

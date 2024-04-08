@@ -1,4 +1,8 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import Splitting from 'splitting'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ProjectCard from '../components/cards/ProjectCard.vue'
 
 const projects = [
@@ -49,14 +53,56 @@ const projects = [
     type: 'personnel'
   }
 ]
+
+const el = ref()
+
+const title = ref()
+const titleSplitted = ref()
+const titleLine = ref()
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger)
+
+  splitElems()
+  animate()
+})
+
+const splitElems = () => {
+  titleSplitted.value = Splitting({ target: title.value, by: 'chars' })[0].chars
+}
+
+const animate = () => {
+  gsap.fromTo(titleSplitted.value, {
+    y: 100
+  }, {
+    scrollTrigger: {
+      trigger: el.value,
+    },
+    y: 0,
+    duration: 0.6,
+    stagger: 0.06
+  })
+
+  gsap.fromTo(titleLine.value, {
+    scaleX: '0%'
+  }, {
+    scrollTrigger: {
+      trigger: el.value,
+    },
+    scaleX: '100%',
+    ease: 'power3.out',
+    duration: 0.6
+  })
+}
+
 </script>
 
 <template>
-  <section id="projects"class="projects">
+  <section ref="el" id="projects"class="projects">
     <div class="projects__title">
-      <h2>
+      <h2 ref="title">
         Projets
-        <div class="highlighting"></div>
+        <div ref="titleLine" class="highlighting"></div>
       </h2>
     </div>
     <div class="projects__list">
@@ -82,6 +128,8 @@ const projects = [
   &__title {
     padding-left: calc(4.166667% * 2);
     display: flex;
+    overflow: hidden;
+    margin-bottom: 30px;
   }
 }
 </style>
