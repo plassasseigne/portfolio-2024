@@ -5,6 +5,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import gsap from 'gsap'
 
 const canvas = ref()
+const screenW = ref()
 let logo
 
 onMounted(() => {
@@ -12,6 +13,9 @@ onMounted(() => {
 })
 
 const init = () => {
+  // Screen
+  screenW.value = screen.width
+
   // Scene
   const scene = new THREE.Scene()
 
@@ -84,7 +88,7 @@ const logoAnimation = () => {
 </script>
 
 <template>
-  <canvas ref="canvas" class="webgl"></canvas>
+  <canvas :v-if="screenW > 1024" ref="canvas" class="webgl"></canvas>
 </template>
 
 <style lang="scss" scoped>

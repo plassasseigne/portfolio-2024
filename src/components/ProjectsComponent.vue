@@ -151,5 +151,9 @@ const animate = () => {
     overflow: hidden;
     margin-bottom: 30px;
   }
+
+  &__list {
+    overflow-x: hidden;
+  }
 }
 </style>

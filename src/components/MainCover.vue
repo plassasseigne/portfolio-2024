@@ -116,6 +116,12 @@ const animation = () => {
   .first-name,
   .last-name {
     overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__title {
@@ -126,10 +132,14 @@ const animation = () => {
 
     span {
       display: inline-block;
-      font-size: 42px;
+      font-size: 32px;
       text-transform: uppercase;
       font-family: 'Rammetto One', sans-serif;
       position: relative;
+
+      @media (min-width: 480px) {
+        font-size: 42px;
+      }
 
       @media (min-width: 768px) {
         font-size: 62px;
@@ -145,18 +155,31 @@ const animation = () => {
         bottom: 10px;
         z-index: -1;
         position: absolute;
-        width: calc(100% + 25px);
+        width: 100%;
         height: 50%;
         background-color: #fae367;
         transform-origin: left;
+
+        @media (min-width: 768px) {
+          width: calc(100% + 25px);
+        }
       }
     }
   }
 
   &__text {
     padding: 0 calc(4.166667% * 2);
-    font-size: 18px;
+    font-size: 16px;
     overflow: hidden;
+    text-align: center;
+
+    @media (min-width: 480px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
 
     @media (min-width: 1024px) {
       width: calc(4.166667% * 6);
@@ -166,10 +189,14 @@ const animation = () => {
 
   &__scroll-button {
     position: absolute;
-    bottom: 5vh;
+    bottom: 10vh;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media (min-width: 1024px) {
+      bottom: 5vh;
+    }
 
     &__wrapper {
       width: 72px;

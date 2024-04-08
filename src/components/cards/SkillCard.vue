@@ -15,7 +15,7 @@ const props = defineProps(['skill', 'opacity'])
 
 <style lang="scss" scoped>
 .skill-card {
-  width: 171px;
+  width: 124px;
   cursor: pointer;
   aspect-ratio: 1 / 1;
   border: solid 2px #fae367;
@@ -28,22 +28,34 @@ const props = defineProps(['skill', 'opacity'])
   backdrop-filter: blur(20px);
   transition: all 0.3s;
 
+  @media (min-width: 1024px) {
+    width: 174px;
+  }
+
   &:hover {
     transform: translateY(-15px);
   }
 
   &__img {
     img {
-      max-height: 54px
+      max-height: 42px;
+
+      @media (min-width: 768px) {
+        max-height: 54px;
+      }
     }
   }
 
   &__name {
     text-align: center;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
   }
 }
 </style>

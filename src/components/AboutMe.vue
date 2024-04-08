@@ -94,7 +94,6 @@ const animate = () => {
   &__container {
     display: flex;
     width: 100%;
-    padding-left: calc(4.166667% * 2);
     gap: calc(4.166667% * 2);
     flex-direction: column;
     row-gap: 50px;
@@ -106,6 +105,7 @@ const animate = () => {
 
   &__character {
     width: calc(4.166667% * 20);
+    padding-left: calc(4.166667% * 2);
 
     @media (min-width: 1024px) {
       width: calc(4.166667% * 8);
@@ -131,9 +131,11 @@ const animate = () => {
 
   &__biography {
     width: calc(4.166667% * 20);
+    padding-left: calc(4.166667% * 2);
 
     @media (min-width: 1024px) {
       width: calc(4.166667% * 10);
+      padding-left: 0;
     }
   }
 

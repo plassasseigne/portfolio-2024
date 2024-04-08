@@ -143,7 +143,7 @@ const route = useRoute()
 .menu {
   position: fixed;
   top: 3vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   z-index: 99;
