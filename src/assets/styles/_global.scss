@@ -34,9 +34,13 @@ figcaption,
 
 h2 {
   font-family: 'Rammetto One', sans-serif;
-  font-size: 48px;
+  font-size: 36px;
   text-transform: uppercase;
   position: relative;
+
+  @media (min-width: 1024px) {
+    font-size: 48px;
+  }
 
   .highlighting {
     display: block;
@@ -51,9 +55,13 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   overflow: hidden;
+
+  @media (min-width: 1024px) {
+    font-size: 36px;
+  }
 }
 
 .offset-1 {

@@ -24,6 +24,12 @@ const props = defineProps(['title', 'link'])
     color: black;
     text-transform: uppercase;
     margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.4s ease-out;
+
+    &:hover {
+      background-color: white;
+    }
   }
 }
 </style>

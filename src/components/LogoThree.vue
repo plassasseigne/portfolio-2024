@@ -102,10 +102,15 @@ const logoAnimation = () => {
 
 <style lang="scss" scoped>
 .webgl {
-    position: absolute;
-    top: 0;
-    left: 0;
-    outline: none;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: -1;
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
 }
 </style>

@@ -10,7 +10,7 @@ const technologies = ["react native", "expo go", "git", "figma"]
 <template>
   <ProjectCover suptitle="Projet personnel" title="Pokedex" date="2024"></ProjectCover>
 
-  <section class="intro">
+  <section id="intro" class="intro">
     <div class="intro__container">
       <div class="intro__presentation">
         <div class="intro__title">

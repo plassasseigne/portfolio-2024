@@ -29,12 +29,6 @@ const route = useRoute()
             <span class="hover">Projets</span>
           </a>
         </div>
-        <div class="menu__tab">
-          <a href="#contact" class="menu__link">
-            <span class="text">Contact</span>
-            <span class="hover">Contact</span>
-          </a>
-        </div>
       </div>
     </nav>
   </header>
@@ -82,14 +76,34 @@ const route = useRoute()
   &__container {
     padding: 35px calc(4.166667% * 2);
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+    row-gap: 45px;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: end;
+    }
   }
 
   &__contact,
   &__logo,
   &__email {
-    width: 33%;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      width: 33%;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+      justify-content: start;
+    }
   }
 
   &__contact {
@@ -109,7 +123,11 @@ const route = useRoute()
     display: flex;
     text-align: right;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      align-items: end;
+    }
   }
 
   &__link {

@@ -60,12 +60,19 @@ const title = ref()
 const titleSplitted = ref()
 const titleLine = ref()
 
+const cards = ref()
+
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
 
+  getElems()
   splitElems()
   animate()
 })
+
+const getElems = () => {
+  cards.value = document.querySelectorAll('.project-card')
+}
 
 const splitElems = () => {
   titleSplitted.value = Splitting({ target: title.value, by: 'chars' })[0].chars
@@ -92,6 +99,21 @@ const animate = () => {
     scaleX: '100%',
     ease: 'power3.out',
     duration: 0.6
+  })
+
+  console.log(cards.value)
+
+  cards.value.forEach((card) => {
+    gsap.fromTo(card, {
+      xPercent: 100
+    }, {
+      scrollTrigger: {
+        trigger: card
+      },
+      xPercent: 0,
+      ease: 'power3.out',
+      duration: 0.6
+    })
   })
 }
 

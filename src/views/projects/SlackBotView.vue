@@ -8,7 +8,7 @@ const technologies = ["slack", "bolt js"]
 <template>
   <ProjectCover suptitle="Projet personnel" title="Bot Slack" date="2024"></ProjectCover>
 
-  <section class="intro">
+  <section id="intro" class="intro">
     <div class="intro__container">
       <div class="intro__presentation">
         <div class="intro__title">

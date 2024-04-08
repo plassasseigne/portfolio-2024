@@ -15,7 +15,6 @@ const animation = () => {
     duration: 15,
     ease: 'linear'
   })
-
 }
 </script>
 
@@ -52,10 +51,14 @@ const animation = () => {
   &__text {
     display: inline-block;
     font-family: 'Rammetto One', sans-serif;
-    font-size: 64px;
+    font-size: 48px;
     text-transform: uppercase;
     color: white;
     margin: 0 20px;
+
+    @media (min-width: 1024px) {
+      font-size: 64px;
+    }
   }
 
   &__text:nth-child(2n) {

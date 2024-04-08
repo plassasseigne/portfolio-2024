@@ -11,7 +11,7 @@ const technologies = ["symfony", "api platform", "git", "figma", "vue js", "post
 <template>
   <ProjectCover suptitle="Projet scolaire" title="Scaryview" date="2024"></ProjectCover>
 
-  <section class="intro">
+  <section id="intro" class="intro">
     <div class="intro__container">
       <div class="intro__presentation">
         <div class="intro__title">

@@ -30,7 +30,8 @@ const slug = props.title.toLowerCase().replace(/\s+/g, '-')
 
 <style lang="scss" scoped>
 .project-card {
-  border: solid 2px #fae367;
+  border-top: solid 2px #fae367;
+  border-bottom: solid 2px #fae367;
   border-collapse: collapse;
   display: block;
   color: black;
@@ -54,6 +55,13 @@ const slug = props.title.toLowerCase().replace(/\s+/g, '-')
     padding: 46px calc(4.166667% * 2) 46px 22px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media (min-width: 1024px) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 
   &__left {
@@ -71,7 +79,11 @@ const slug = props.title.toLowerCase().replace(/\s+/g, '-')
   &__infos {
     display: flex;
     flex-direction: column;
-    text-align: right;
+    text-align: left;
+
+    @media (min-width: 1024px) {
+      text-align: right;
+    }
   }
 
   &__number {
@@ -82,9 +94,17 @@ const slug = props.title.toLowerCase().replace(/\s+/g, '-')
 
   &__title {
     font-family: 'Rammetto One', sans-serif;
-    font-size: 54px;
+    font-size: 36px;
     text-transform: uppercase;
     transition: color 0.3s ease-out;
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 54px;
+    }
   }
 
   &__background {

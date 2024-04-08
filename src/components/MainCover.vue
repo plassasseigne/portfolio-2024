@@ -126,11 +126,19 @@ const animation = () => {
 
     span {
       display: inline-block;
-      font-size: 86px;
-      line-height: 115px;
+      font-size: 42px;
       text-transform: uppercase;
       font-family: 'Rammetto One', sans-serif;
       position: relative;
+
+      @media (min-width: 768px) {
+        font-size: 62px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 86px;
+        line-height: 115px;
+      }
 
       .highlighting {
         display: block;
@@ -146,10 +154,14 @@ const animation = () => {
   }
 
   &__text {
-    width: calc(4.166667% * 6);
     padding: 0 calc(4.166667% * 2);
-    font-size: 24px;
+    font-size: 18px;
     overflow: hidden;
+
+    @media (min-width: 1024px) {
+      width: calc(4.166667% * 6);
+      font-size: 24px;
+    }
   }
 
   &__scroll-button {

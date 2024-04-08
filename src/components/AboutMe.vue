@@ -96,10 +96,20 @@ const animate = () => {
     width: 100%;
     padding-left: calc(4.166667% * 2);
     gap: calc(4.166667% * 2);
+    flex-direction: column;
+    row-gap: 50px;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 
   &__character {
-    width: calc(4.166667% * 8);
+    width: calc(4.166667% * 20);
+
+    @media (min-width: 1024px) {
+      width: calc(4.166667% * 8);
+    }
 
     &__container {
       background-color: #fae367;
@@ -120,7 +130,11 @@ const animate = () => {
   }
 
   &__biography {
-    width: calc(4.166667% * 10);
+    width: calc(4.166667% * 20);
+
+    @media (min-width: 1024px) {
+      width: calc(4.166667% * 10);
+    }
   }
 
   &__title {

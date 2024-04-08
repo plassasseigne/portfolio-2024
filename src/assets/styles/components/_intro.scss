@@ -6,15 +6,30 @@
     display: flex;
     width: 100%;
     gap: 4.166667%;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 
   &__presentation {
     padding-left: calc(4.166667% * 2);
-    width: calc(4.166667% * 9);
+    width: calc(4.166667% * 20);
+
+    @media (min-width: 1024px) {
+      width: calc(4.166667% * 9);
+    }
   }
 
   &__technologies {
-    width: calc(4.166667% * 10);
+    padding-left: calc(4.166667% * 2);
+    width: calc(4.166667% * 20);
+
+    @media (min-width: 1024px) {
+      padding-left: 0;
+      width: calc(4.166667% * 10);
+    }
   }
   
   &__title {
@@ -25,8 +40,12 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
     align-items: center;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

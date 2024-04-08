@@ -10,7 +10,7 @@ const technologies = ["unity", "blender"]
 <template>
   <ProjectCover suptitle="Projet scolaire" title="Jeu de voiture" date="2023"></ProjectCover>
 
-  <section class="intro">
+  <section id="intro" class="intro">
     <div class="intro__container">
       <div class="intro__presentation">
         <div class="intro__title">
